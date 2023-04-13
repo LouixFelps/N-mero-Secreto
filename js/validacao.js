@@ -2,10 +2,18 @@
 function validarValor(numeroFalado, chute){
     const numero = +numeroFalado
     
-    if(Number.isNaN(numero)){
+   if(Number.isNaN(numero) && numeroFalado != 'game over'){
         chute.innerHTML += '<div>Por favor, fale um valor válido</div>'
         return
-    } 
+    }else if(numeroFalado === 'game over'){
+        document.body.innerHTML = `<style>
+        body{
+            background-color: #FF1600;
+        }
+        </style>
+        <div class="fim"><i class="fa-sharp fa-solid fa-skull"></i> Game Over <i class="fa-sharp fa-solid fa-skull"></i></div>
+        <button id="restart" class="btn-jogar">Jogar Novamente</button>`
+    }
     if(numeroMaiorOuMenor(numero)){
         chute.innerHTML += `<div>Por favor, fale um valor entre ${menorValor} e ${maiorValor}</div>`
         return
