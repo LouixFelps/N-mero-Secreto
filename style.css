@@ -50,8 +50,14 @@ body{
     padding: 1em 2em;
     border-radius: 5px;
 }
+
 .btn-jogar:hover{
-    background-color: #FF1600;
+    background-color: #FFFF00;
     font-size: 1.6em;
     margin-top: 1.6em;
+}
+
+.fim{
+    background-color: #FF1600;
+    font-size: 6em;
 }
